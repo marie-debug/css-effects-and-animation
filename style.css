@@ -1,0 +1,104 @@
+
+
+
+
+
+@keyframes red-to-green {
+    0% {background: red};
+    50% {background: blue};
+    100% {background:green}
+    
+}
+
+
+* {
+box-sizing: border-box;
+}
+
+
+
+h1 {
+    color:rgba(102, 51, 153, 0.474); 
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+p strong {
+    font-size: 1.5rem;
+}
+.bigimage {
+
+overflow:hidden;
+display: flex;
+align-items:flex-end;
+justify-content: center;
+width:250px;
+height:180px;
+color:white;
+background: url('https://placekeanu.com/500/300') green 25% center no-repeat;
+background-size: cover;
+border-radius:1rem 2rem 3rem 4rem;
+box-shadow: 0px 00px 20px black;
+animation-name:red-to-green;
+animation-duration: 15s;
+
+
+}
+
+.bigimage:hover .overlay {
+
+
+    transform: translateY(0);
+}
+
+.overlay {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 1rem;
+    font-weight: bold;
+    width:100px;
+    padding: 0.5rem;
+    background: #8214446d;
+    transform: translateY(100%);
+    transition: transform 1.5s;
+}
+
+.overlay span {
+    opacity: 0;
+    transition: opacity 1s 2s;
+}
+
+.bigimage:hover .overlay span {
+    opacity: 1;
+}
+
+#boxes {
+    display:flex;
+    margin-top: 4rem;
+    border: 1px solid red;
+    width: 300px;
+
+}
+#boxes div {
+    width:100px;
+    display: inline-block;
+    height: 100px;
+    padding: 5px;
+    border: solid black
+}
+
+#boxes div:nth-of-type(1){
+    background: blue;
+
+}
+#boxes div:nth-of-type(2){
+    background: rgb(0, 255, 98);
+}
+#boxes div:nth-of-type(3){
+    background: rgb(255, 0, 132);
+}
